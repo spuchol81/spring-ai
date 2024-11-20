@@ -4,8 +4,11 @@ spring:
     org.springframework.ai.autoconfigure.ollama.OllamaAutoConfiguration
   ai.openai:
     chat:
-      options.model: gpt-4o
+      #options.model: gpt-4o
+      options.model: mistralai/Mistral-7B-Instruct-v0.2
       options.temperature: 1.0
     image.options:
       model: dall-e-3
-    api-key:
+      size: 1024x1024
+    api-key: "sk-proj-8GM3BLBygaLOwEQKc1tbT3BlbkFJ3mFGZdfTb3Atv9eJjHkf"
+    base-url: "http://vllm.vllm.svc.cluster.local:8000"
