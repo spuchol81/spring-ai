@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: fluxcd-helmrelease-installer
-    namespace: spu-space-597794b47-pr47b
+    namespace: spu-space-865546976-8fdhh
 roleRef:
   kind: ClusterRole
   name: cluster-admin
