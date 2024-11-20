@@ -5,7 +5,7 @@ It also shows how to implement advanced techniques for the adaption of foundatio
 
 ![](docs/images/ui-sample.png)
 
-[Slides: Building AI-Driven Spring Applications with Spring AI](docs/slides.pdf)
+[Slides: Building AI-Driven Spring Applications with Spring AI](docs/SpringAI-From-exploration-to-production.pdf)
 
 # Setup
 ## LLM
@@ -75,7 +75,7 @@ By checking the "Prefer own recipes" checkbox, [Retrieval-Augmented Generation](
 
 To upload your own PDF documents for recipes to the vector database, there is a REST API endpoint implemented. 
 ```
-curl -XPOST -F "file=@$PWD/german_recipes.pdf" -F "pageBottomMargin=50" http://localhost:8080/api/v1/recipes/upload
+curl -XPOST -F "file=@$PWD/Easy_recipes.pdf" http://localhost:8080/api/v1/recipes/upload
 ```
 The sample recipe part of this repository is made with 14 recipe I want to promote. With the input "beef", you should get the beef in beer recipe.
 ![](docs/images/ui-sample-rag.png)
@@ -84,5 +84,7 @@ The sample recipe part of this repository is made with 14 recipe I want to promo
 By checking the "Scan my dish" checkbox, [Multimodality](https://docs.spring.io/spring-ai/reference/api/multimodality.html) will be enabled. By adding a publicly available jpeg image of a dish(ie: https://img.cuisineaz.com/660x660/2013/12/20/i16509-photo-de-tartiflette.jpeg), you should get its recipe. 
 
 ## Chatbot feature
-By default, chatbot is configured with the [simplest chatclient onliner](https://github.com/spuchol81/spring-ai/blob/main/src/main/java/com/example/ChefService.java#L34-L42) in streaming mode. Give your llm the chef personality by uncommenting system prompt line.
-give your llm access to vector db content by uncommenting the advisor line 
+By default, chatbot is configured with the [simplest chatclient onliner](https://github.com/spuchol81/spring-ai/blob/main/src/main/java/com/example/ChefService.java#L34-L42) in streaming mode.
+Give your llm the chef personality by uncommenting system prompt line. ![](docs/images/switchpersonality.png)
+give your llm access to vector db content by uncommenting the advisor line.
+If you ask for a beef recipe, you should get the Beef in Beer recipe. 
