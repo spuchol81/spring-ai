@@ -86,5 +86,6 @@ By checking the "Scan my dish" checkbox, [Multimodality](https://docs.spring.io/
 ## Chatbot feature
 By default, chatbot is configured with the [simplest chatclient onliner](https://github.com/spuchol81/spring-ai/blob/main/src/main/java/com/example/ChefService.java#L34-L42) in streaming mode.
 Give your llm the chef personality by uncommenting system prompt line. ![](docs/images/switchpersonality.png)
-give your llm access to vector db content by uncommenting the advisor line.
+
+Give your llm access to vector db content by uncommenting the advisor line.
 If you ask for a beef recipe, you should get the Beef in Beer recipe. 
