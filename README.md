@@ -84,5 +84,5 @@ The sample recipe part of this repository is made with 14 recipe I want to promo
 By checking the "Scan my dish" checkbox, [Multimodality](https://docs.spring.io/spring-ai/reference/api/multimodality.html) will be enabled. By adding a publicly available jpeg image of a dish(ie: https://img.cuisineaz.com/660x660/2013/12/20/i16509-photo-de-tartiflette.jpeg), you should get its recipe. 
 
 ## Chatbot feature
-By default, chatbot is configured with the [simplest chatclient onliner] https://github.com/spuchol81/spring-ai/blob/main/src/main/java/com/example/ChefService.java#L34-L42 in streaming mode. Give your llm the chef personality by uncommenting system prompt line.
+By default, chatbot is configured with the [simplest chatclient onliner](https://github.com/spuchol81/spring-ai/blob/main/src/main/java/com/example/ChefService.java#L34-L42) in streaming mode. Give your llm the chef personality by uncommenting system prompt line.
 give your llm access to vector db content by uncommenting the advisor line 
