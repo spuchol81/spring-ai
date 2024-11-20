@@ -36,9 +36,9 @@ public class ChefService {
         var advisorSearchRequest = SearchRequest.query(question).withTopK(1).withSimilarityThreshold(0.8);
         var advise = new PromptTemplate(chefCookBook).getTemplate();
         return chatClient.prompt()
-                        .system(chef)
+                        //.system(chef)
                         .user(question)
-                        .advisors(new QuestionAnswerAdvisor(vectorStore, advisorSearchRequest, advise))
+                        //.advisors(new QuestionAnswerAdvisor(vectorStore, advisorSearchRequest, advise))
                         .stream().content();
     }
 
